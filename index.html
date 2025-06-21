@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlayzerStore - Gaming Services</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">GlayzerStore</div>
+    <ul class="nav-links nav-desktop">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="topup.html">Topup</a></li>
+        <li class="nav-dropdown-parent">
+        <a href="#">Joki <i class="fas fa-caret-down"></i></a>
+        <ul class="nav-submenu">
+            <li><a href="joki.html">Joki MLBB</a></li>
+            <li><a href="#">Joki MCGG</a></li>
+        </ul>
+        </li>
+      <li><a href="#">Beli akun</a></li>
+    </ul>
+
+    <!-- Tambahan baru -->
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-dropdown">
+      <a href="index.html" onclick="handleMobileNavClick()">Home</a>
+      <a href="topup.html" onclick="handleMobileNavClick()">Topup</a>
+      <a href="joki.html" onclick="handleMobileNavClick()">Joki</a>
+      <a href="#" onclick="handleMobileNavClick()">Beli Akun</a>
+    </div>
+  </nav>
+</header>
+
+    <!-- Hero Section -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="BANNER 3 HERO.png" alt="Slide 1"></div>
+            <div class="slide"><img src="BANNER HARIT.png" alt="Slide 2"></div>
+            <div class="slide"><img src="BANNER LING.png" alt="Slide 3"></div>
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </div>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2 class="services-title">LAYANAN KAMI:</h2>
+        <div class="services-grid">
+            <div class="service-card joki-ml">
+                <div class="service-icon">
+                    <img src="https://static.upoint.id/images/contents/ml-2019.jpg" alt="MLBB Icon">
+                </div>
+                <div class="service-text">
+                    <h3>Joki Rank</h3>
+                    <p>Mobile Legend</p>
+                </div>
+            </div>
+
+            <div class="service-card joki-mc">
+                <div class="service-icon">
+                    <img src="https://cdn.moogold.com/2024/09/magic-chess-2.jpg" alt="MCGG Icon">
+                </div>
+                <div class="service-text">
+                    <h3>Joki Rank</h3>
+                    <p>Magic Chess</p>
+                </div>
+            </div>
+
+            <div class="service-card topup">
+                <div class="service-icon">
+                    <img src="https://cdn.vcgamers.com/uploads/product/20231011190354produk30.png" alt="Topup">
+                </div>
+                <div class="service-text">
+                    <h3>Topup</h3>
+                    <p>Mobile Legend</p>
+                </div>
+            </div>
+
+            <div class="service-card jual-beli">
+                <div class="service-icon">
+                    <img src="https://i.pinimg.com/736x/f3/c6/1d/f3c61d792186d35427b78413ab1e58ac.jpg" alt="Jual Beli">
+                </div>
+                <div class="service-text">
+                    <h3>Jual Beli</h3>
+                    <p>Mobile Legend</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Price Lists -->
+    <div class="container">
+        <section class="price-section">
+            <div class="section-header">
+                <div class="section-info">
+                    <div class="section-icon">
+                        <img src="https://static.upoint.id/images/contents/ml-2019.jpg" alt="MLBB Icon">
+                    </div>
+                    <div>
+                        <h3>List Harga</h3>
+                        <p>Joki Rank Mobile Legend (Perbintang)</p>
+                    </div>
+                </div>
+                <a href="joki.html" class="order-btn">Order Disini</a>
+            </div>
+
+            <div class="price-grid">
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://i.pinimg.com/originals/e1/41/f4/e141f4df77f394b928f9f13ac719191b.png" alt="Master">
+                    </div>
+                    <h4>Master</h4>
+                    <div class="price">Rp. 4.000</div>
+                </div>
+
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1626065491/whsaoxescjjqypryfml4.png" alt="GrandMaster">
+                    </div>
+                    <h4>GrandMaster</h4>
+                    <div class="price">Rp. 5.000</div>
+                </div>
+
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://static.wikia.nocookie.net/mobile-legends/images/2/26/Epic.png/revision/latest?cb=20240224061803" alt="Epic">
+                    </div>
+                    <h4>Epic</h4>
+                    <div class="price">Rp. 6.000</div>
+                </div>
+
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://www.lapakgaming.com/blog/en-ph/wp-content/uploads/2023/09/legend.webp" alt="Legend">
+                    </div>
+                    <h4>Legend</h4>
+                    <div class="price">Rp. 7.000</div>
+                </div>
+
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/689827e2-f006-498a-a1e5-2c70425a2719/dee9s93-ce89942b-d758-4296-aacd-64df565f16e3.png/v1/fill/w_1280,h_1280/mobile_legends_mythic_rank_icon_vector_by_masnera_dee9s93-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY4OTgyN2UyLWYwMDYtNDk4YS1hMWU1LTJjNzA0MjVhMjcxOVwvZGVlOXM5My1jZTg5OTQyYi1kNzU4LTQyOTYtYWFjZC02NGRmNTY1ZjE2ZTMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNjg5ODI3ZTItZjAwNi00OThhLWExZTUtMmM3MDQyNWEyNzE5XC9tYXNuZXJhLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.XrwTKbXfiBxbkoJDFgiGwv-eM0yKHmdikdOrbmwrdfs" alt="Mythic">
+                    </div>
+                    <h4>Mythic</h4>
+                    <div class="price">Rp. 15.000</div>
+                </div>
+
+                <div class="price-card">
+                    <div class="rank-icon">
+                        <img src="https://i.pinimg.com/originals/6a/1c/a9/6a1ca96185dd0d501aa81d5751516862.png" alt="M Honor">
+                    </div>
+                    <h4>M Honor</h4>
+                    <div class="price">Rp. 17.000</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Magic Chess Joki Prices -->
+      <div class="container">
+      <section class="price-section">
+        <div class="section-header">
+          <div class="section-info">
+            <div class="section-icon">
+              <img src="https://cdn.moogold.com/2024/09/magic-chess-2.jpg" alt="Magic Chess Icon">
+            </div>
+            <div>
+              <h3>List Harga</h3>
+              <p>Joki Rank Magic Chess (perbintang)</p>
+            </div>
+          </div>
+          <button class="order-btn">Order Disini</button>
+        </div>
+
+        <div class="price-grid chess-grid">
+
+          <div class="price-card">
+            <div class="rank-icon">
+              <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1626065491/whsaoxescjjqypryfml4.png" alt="GrandMaster">
+            </div>
+            <h4>GrandMaster</h4>
+            <div class="price">Rp. 8.000</div>
+          </div>
+
+          <div class="price-card">
+            <div class="rank-icon">
+              <img src="https://static.wikia.nocookie.net/mobile-legends/images/2/26/Epic.png/revision/latest?cb=20240224061803" alt="Epic">
+            </div>
+            <h4>Epic</h4>
+            <div class="price">Rp. 9.000</div>
+          </div>
+
+          <div class="price-card">
+            <div class="rank-icon">
+              <img src="https://www.lapakgaming.com/blog/en-ph/wp-content/uploads/2023/09/legend.webp" alt="Legend">
+            </div>
+            <h4>Legend</h4>
+            <div class="price">Rp. 9.000</div>
+          </div>
+
+          <div class="price-card">
+            <div class="rank-icon">
+              <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/689827e2-f006-498a-a1e5-2c70425a2719/dee9s93-ce89942b-d758-4296-aacd-64df565f16e3.png/v1/fill/w_1280,h_1280/mobile_legends_mythic_rank_icon_vector_by_masnera_dee9s93-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY4OTgyN2UyLWYwMDYtNDk4YS1hMWU1LTJjNzA0MjVhMjcxOVwvZGVlOXM5My1jZTg5OTQyYi1kNzU4LTQyOTYtYWFjZC02NGRmNTY1ZjE2ZTMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNjg5ODI3ZTItZjAwNi00OThhLWExZTUtMmM3MDQyNWEyNzE5XC9tYXNuZXJhLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.XrwTKbXfiBxbkoJDFgiGwv-eM0yKHmdikdOrbmwrdfs" alt="Mythic">
+            </div>
+            <h4>Mythic</h4>
+            <div class="price">Rp. 16.000</div>
+          </div>
+
+          <div class="price-card">
+            <div class="rank-icon">
+              <img src="https://i.pinimg.com/originals/6a/1c/a9/6a1ca96185dd0d501aa81d5751516862.png" alt="M Honor">
+            </div>
+            <h4>M Honor</h4>
+            <div class="price">Rp. 21.000</div>
+          </div>
+        </div>
+      </section>
+      </div> 
+
+    <!-- Flash Sale Accounts -->
+    <div class="container">
+        <section class="price-section flash-sale">
+            <div class="section-header">
+                <div class="section-info">
+                    <div class="section-icon">
+                        <img src="https://i.pinimg.com/736x/f3/c6/1d/f3c61d792186d35427b78413ab1e58ac.jpg" alt="Flash Sale Icon">
+                    </div>
+                    <div>
+                        <h3>Flash Sale</h3>
+                        <p>Akun Mobile Legend</p>
+                    </div>
+                </div>
+                <button class="order-btn see-all">Lihat Semua</button>
+            </div>
+
+            <div class="accounts-grid">
+                <div class="account-card">
+                    <img class="account-thumbnail" src="WhatsApp Image 2025-05-01 at 08.30.33_bd4b6314.jpg" alt="Granger">
+                    <h4>Granger Collect Ft YSS</h4>
+                    <div class="account-price">Rp 225.000</div>
+                </div>
+                <div class="account-card">
+                    <img class="account-thumbnail" src="WhatsApp Image 2025-05-01 at 08.30.33_9dbe339f.jpg" alt="Valir">
+                    <h4>Valir Leg, Julian JJK + DLL</h4>
+                    <div class="account-price">Rp 520.000</div>
+                </div>
+                <div class="account-card">
+                    <img class="account-thumbnail" src="WhatsApp Image 2025-05-01 at 08.30.32_c63b5704.jpg" alt="YSS">
+                    <h4>YSS Collector, Xavier JJK + DLL</h4>
+                    <div class="account-price">Rp 650.000</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-layout">
+            <div class="footer-side footer-left">
+                <div>
+                    <strong class="footer-title">CUSTOMER SERVICE</strong>
+                    <div class="cs-inline">
+                        <a href="#" class="cs-link">💬 CS AKUN</a>
+                        <a href="#" class="cs-link">📱 CS JOKI</a>
+                        <a href="#" class="cs-link">💬 CS JUAL AKUN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2024 GLAYZERSTORE</p>
+            </div>
+
+            <div class="footer-side footer-right">
+                <div>
+                    <strong class="footer-title">LEGALITAS</strong>
+                    <div class="legal-links">
+                        <a href="syarat.html">Syarat & Ketentuan</a> |
+                        <a href="privasi.html">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

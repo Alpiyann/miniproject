@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Joki Mobile Legends - Layanan Rank Boost</title>
+    <link rel="stylesheet" href="joki.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+    <nav class="navbar">
+        <div class="logo">GlayzerStore</div>
+        <ul class="nav-links nav-desktop">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="topup.html">Topup</a></li>
+            <li class="nav-dropdown-parent">
+            <a href="#">Joki <i class="fas fa-caret-down"></i></a>
+            <ul class="nav-submenu">
+                <li><a href="joki.html">Joki MLBB</a></li>
+                <li><a href="#">Joki MCGG</a></li>
+            </ul>
+            </li>
+        <li><a href="#">Beli akun</a></li>
+        </ul>
+
+        <!-- Tambahan baru -->
+        <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+        </div>
+        <div class="nav-dropdown">
+        <a href="index.html" onclick="handleMobileNavClick()">Home</a>
+        <a href="topup.html" onclick="handleMobileNavClick()">Topup</a>
+        <a href="joki.html" onclick="handleMobileNavClick()">Joki</a>
+        <a href="#" onclick="handleMobileNavClick()">Beli Akun</a>
+        </div>
+    </nav>
+    </header>
+    <div class="container">
+        <!-- Sidebar Price List -->
+        <aside class="sidebar">
+            <div class="price-list">
+                <div>
+                    <div class="price-toggle-header" id="togglePriceList">LIST HARGA ▼</div>
+                <div id="rankListContainer" class="animated-collapse hidden">
+                <div class="rank-item">
+                    <img src="https://i.pinimg.com/originals/e1/41/f4/e141f4df77f394b928f9f13ac719191b.png" alt="Master" class="rank-icon">
+                    <span class="rank-name">Master</span>
+                    <span class="rank-price">Rp 3.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,f_auto,q_auto:best,w_640/v1626065491/whsaoxescjjqypryfml4.png" alt="GrandMaster" class="rank-icon">
+                    <span class="rank-name">GrandMaster</span>
+                    <span class="rank-price">Rp 4.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://static.wikia.nocookie.net/mobile-legends/images/2/26/Epic.png/revision/latest?cb=20240224061803" alt="Epic" class="rank-icon">
+                    <span class="rank-name">Epic</span>
+                    <span class="rank-price">Rp 5.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://www.lapakgaming.com/blog/en-ph/wp-content/uploads/2023/09/legend.webp" alt="Legend" class="rank-icon">
+                    <span class="rank-name">Legend</span>
+                    <span class="rank-price">Rp 7.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/689827e2-f006-498a-a1e5-2c70425a2719/dee9s93-ce89942b-d758-4296-aacd-64df565f16e3.png/v1/fill/w_1280,h_1280/mobile_legends_mythic_rank_icon_vector_by_masnera_dee9s93-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY4OTgyN2UyLWYwMDYtNDk4YS1hMWU1LTJjNzA0MjVhMjcxOVwvZGVlOXM5My1jZTg5OTQyYi1kNzU4LTQyOTYtYWFjZC02NGRmNTY1ZjE2ZTMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNjg5ODI3ZTItZjAwNi00OThhLWExZTUtMmM3MDQyNWEyNzE5XC9tYXNuZXJhLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.XrwTKbXfiBxbkoJDFgiGwv-eM0yKHmdikdOrbmwrdfs" alt="Mythic" class="rank-icon">
+                    <span class="rank-name">Mythic</span>
+                    <span class="rank-price">Rp 10.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://i.pinimg.com/originals/6a/1c/a9/6a1ca96185dd0d501aa81d5751516862.png" alt="M Honor" class="rank-icon">
+                    <span class="rank-name">M Honor</span>
+                    <span class="rank-price">Rp 15.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://static.wikia.nocookie.net/mobile-legends/images/4/42/Mythical_Glory.png/revision/latest?cb=20240224062034" alt="M Glory" class="rank-icon">
+                    <span class="rank-name">M Glory</span>
+                    <span class="rank-price">Rp 20.000</span>
+                </div>
+                <div class="rank-item">
+                    <img src="https://static.wikia.nocookie.net/mobile-legends/images/3/3c/Mythical_Immortal.png/revision/latest?cb=20240224062115" alt="M Immortal" class="rank-icon">
+                    <span class="rank-name">M Immortal</span>
+                    <span class="rank-price">Rp 30.000</span>
+                </div>
+            </div>
+
+            <!-- Hero Card -->
+            <div class="character-card floating">
+                    <div class="character-image">
+                      <img src="download (2).jpeg" alt="Granger" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-icon">⚡</span>
+                            <span class="rating-text">Proses Kilat</span>
+                        </div>
+                        <div class="rating-divider">|</div>
+                        <div class="rating-item">
+                            <span class="rating-score">4.9</span>
+                            <span class="rating-icon">⭐</span>
+                        </div>
+                    </div>
+                    <p class="review-text">dari 49.2 rb Ulasan</p>
+                </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Calculator Section -->
+            <section class="calculator-section">
+                <h2 class="section-title">Kalkulator Joki Mobile Legends</h2>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Rank Sekarang</label>
+                            <select id="currentRank" class="form-select">
+                            <option value="">Pilih rank kamu sekarang</option>
+                            <option value="master4">Master 4</option>
+                            <option value="master3">Master 3</option>
+                            <option value="master2">Master 2</option>
+                            <option value="master1">Master 1</option>
+                            <option value="gm5">Grand Master 5</option>
+                            <option value="gm4">Grand Master 4</option>
+                            <option value="gm3">Grand Master 3</option>
+                            <option value="gm2">Grand Master 2</option>
+                            <option value="gm1">Grand Master 1</option>
+                            <option value="epic5">Epic 5</option>
+                            <option value="epic4">Epic 4</option>
+                            <option value="epic3">Epic 3</option>
+                            <option value="epic2">Epic 2</option>
+                            <option value="epic1">Epic 1</option>
+                            <option value="legend5">Legend 5</option>
+                            <option value="legend4">Legend 4</option>
+                            <option value="legend3">Legend 3</option>
+                            <option value="legend2">Legend 2</option>
+                            <option value="legend1">Legend 1</option>
+                            <option value="mythic">Mythic Romawi</option>
+                            <option value="mhonor">Mythical Honor</option>
+                            <option value="mglory">Mythical Glory</option>
+                            <option value="mimmortal">Mythical Immortal</option>
+                            </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Bintang</label>
+                        <input type="number" id="currentStar" class="form-input" placeholder="0">
+                        <small id="currentError" style="color: #ff4d4d;"></small>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Rank Tujuan</label>
+                        <select id="targetRank" class="form-select" disabled>
+                            <option>Pilih Rank Tujuan Kamu</option>
+                            <option value="master">Master</option>
+                            <option value="grandmaster">GrandMaster</option>
+                            <option value="epic">Epic</option>
+                            <option value="legend">Legend</option>
+                            <option value="mythic">Mythic</option>
+                            <option value="mhonor">Mythic Honor</option>
+                            <option value="mglory">Mythic Glory</option>
+                            <option value="mglory">Mythic Immortal</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Bintang</label>
+                        <input type="number" id="targetStar" class="form-input" placeholder="0">
+                        <small id="targetError" style="color: #ff4d4d;"></small>
+                    </div>
+                </div>
+
+                <button class="calculate-btn" onclick="calculatePrice()">Hitung Harga</button>
+            </section>
+
+            <!-- Package Section -->
+            <section class="package-section">
+                <h2 class="section-title">Joki Paket</h2>
+                <p class="section-subtitle">Pilih Paket</p>
+                
+                <div class="package-grid">
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR EPIC</span>
+                            <img src="https://static.wikia.nocookie.net/mobile-legends/images/2/26/Epic.png/revision/latest?cb=20240224061803" alt="Epic" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 58.000</div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR LEGEND</span>
+                            <img src="https://www.lapakgaming.com/blog/en-ph/wp-content/uploads/2023/09/legend.webp" alt="Legend" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 68.000</div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR MYTHIC</span>
+                            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/689827e2-f006-498a-a1e5-2c70425a2719/dee9s93-ce89942b-d758-4296-aacd-64df565f16e3.png/v1/fill/w_1280,h_1280/mobile_legends_mythic_rank_icon_vector_by_masnera_dee9s93-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY4OTgyN2UyLWYwMDYtNDk4YS1hMWU1LTJjNzA0MjVhMjcxOVwvZGVlOXM5My1jZTg5OTQyYi1kNzU4LTQyOTYtYWFjZC02NGRmNTY1ZjE2ZTMucG5nIiwiaGVpZ2h0IjoiPD0xMjgwIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvNjg5ODI3ZTItZjAwNi00OThhLWExZTUtMmM3MDQyNWEyNzE5XC9tYXNuZXJhLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.XrwTKbXfiBxbkoJDFgiGwv-eM0yKHmdikdOrbmwrdfs" alt="Mythic" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 145.000</div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR HONOR</span>
+                            <img src="https://i.pinimg.com/originals/6a/1c/a9/6a1ca96185dd0d501aa81d5751516862.png" alt="M Honor" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 165.000</div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR GLORY</span>
+                            <img src="https://static.wikia.nocookie.net/mobile-legends/images/4/42/Mythical_Glory.png/revision/latest?cb=20240224062034" alt="M Glory" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 215.000</div>
+                    </div>
+
+                    <div class="package-card">
+                        <div class="package-header">
+                            <span class="package-title">10 STAR IMMORTAL</span>
+                            <img src="https://static.wikia.nocookie.net/mobile-legends/images/3/3c/Mythical_Immortal.png/revision/latest?cb=20240224062115" alt="M Immortal" class="package-icon">
+                        </div>
+                        <div class="package-price">Rp 255.000</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-layout">
+            <div class="footer-side footer-left">
+                <div>
+                    <strong class="footer-title">CUSTOMER SERVICE</strong>
+                    <div class="cs-inline">
+                        <a href="#" class="cs-link">💬 CS AKUN</a>
+                        <a href="#" class="cs-link">📱 CS JOKI</a>
+                        <a href="#" class="cs-link">💬 CS JUAL AKUN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2024 GLAYZERSTORE</p>
+            </div>
+
+            <div class="footer-side footer-right">
+                <div>
+                    <strong class="footer-title">LEGALITAS</strong>
+                    <div class="legal-links">
+                        <a href="syarat.html">Syarat & Ketentuan</a> |
+                        <a href="privasi.html">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="joki.js"></script>
+</body>
+</html>

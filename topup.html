@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Glayzer Store - Gaming Top Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">GlayzerStore</div>
+    <ul class="nav-links nav-desktop">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="topup.html">Topup</a></li>
+        <li class="nav-dropdown-parent">
+        <a href="#">Joki <i class="fas fa-caret-down"></i></a>
+        <ul class="nav-submenu">
+            <li><a href="joki.html">Joki MLBB</a></li>
+            <li><a href="#">Joki MCGG</a></li>
+        </ul>
+        </li>
+      <li><a href="#">Beli akun</a></li>
+    </ul>
+
+    <!-- Tambahan baru -->
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="nav-dropdown">
+      <a href="index.html" onclick="handleMobileNavClick()">Home</a>
+      <a href="topup.html" onclick="handleMobileNavClick()">Topup</a>
+      <a href="joki.html" onclick="handleMobileNavClick()">Joki</a>
+      <a href="#" onclick="handleMobileNavClick()">Beli Akun</a>
+    </div>
+  </nav>
+</header>
+
+        <div class="main-content">
+            <aside class="sidebar">
+                <h3 id="toggle-topup" style="cursor: pointer;">
+                    Cara Top Up <span id="toggle-icon">▼</span>
+                </h3>
+                <ol id="topup-steps" style="max-height: 0; overflow: hidden; transition: max-height 0.5s ease;">
+                    <li>Masukkan Id Game dan Id Zone</li>
+                    <li>Pilih nominal Diamond sesuai dengan kebutuhan kamu</li>
+                    <li>Pilih metode pembayaran</li>
+                    <li>Tulis No WhatsApp aktif kamu dengan benar agar kamu bisa dihubungi dengan mudah</li>
+                    <li>Lengkapi data untuk pengembalian dana ...</li>
+                    <li>Klik tombol "Beli Sekarang" & lakukan pembayaran</li>
+                </ol>
+
+                <div class="character-card floating">
+                    <div class="character-image">
+                      <img src="mlbb_granger_exorcist__skin_hd_wallpaper_by_keyadfdf_dhghut6-pre.png" alt="Granger" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+                    </div>
+                    <div class="rating-section">
+                        <div class="rating-item">
+                            <span class="rating-icon">⚡</span>
+                            <span class="rating-text">Proses Kilat</span>
+                        </div>
+                        <div class="rating-divider">|</div>
+                        <div class="rating-item">
+                            <span class="rating-score">4.9</span>
+                            <span class="rating-icon">⭐</span>
+                        </div>
+                    </div>
+                    <p class="review-text">dari 49.2 rb Ulasan</p>
+                </div>
+                <div class="order-summary-box">
+                    <div id="order-summary-content">
+                        Belum ada item produk yang dipilih.
+                    </div>
+                    <button class="order-button" onclick="submitOrder()">🛒 Pesan Sekarang!</button>
+                </div>
+            </aside>
+
+            <main class="content-area">
+                <section class="section">
+                    <div class="section-title">MASUKKAN ID PENGGUNA</div>
+                    <div class="input-group">
+                        <input type="text" placeholder="ID Pengguna" id="userId">
+                        <input type="text" placeholder="Server" id="server">
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">PILIH PRODUK</div>
+                    <div class="tabs">
+                        <button class="tab active" onclick="switchTab('all')">Semua Produk</button>
+                        <button class="tab" onclick="switchTab('special')">Produk Spesial</button>
+                        <button class="tab" onclick="switchTab('diamond')">Diamond</button>
+                    </div>
+
+                    <div id="special-products" class="products-grid">
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">Weekly Diamond Pass x1</div>
+                            <div class="product-price">Rp 28.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">Weekly Diamond Pass x2</div>
+                            <div class="product-price">Rp 56.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">Weekly Diamond Pass x3</div>
+                            <div class="product-price">Rp 84.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">🌙</div>
+                            <div class="product-name">Twilight Pass</div>
+                            <div class="product-price">Rp 150.000</div>
+                        </div>
+                    </div>
+
+                    <div id="diamond-products" class="products-grid">
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">42 Diamond</div>
+                            <div class="product-price">Rp 12.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">100 Diamond</div>
+                            <div class="product-price">Rp 28.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">210 Diamond</div>
+                            <div class="product-price">Rp 55.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">500 Diamond</div>
+                            <div class="product-price">Rp 132.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">408 Diamond</div>
+                            <div class="product-price">Rp 115.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">565 Diamond</div>
+                            <div class="product-price">Rp 160.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">600 Diamond</div>
+                            <div class="product-price">Rp 170.000</div>
+                        </div>
+                        <div class="product-card" onclick="selectProduct(this)">
+                            <div class="product-icon">💎</div>
+                            <div class="product-name">1220 Diamond</div>
+                            <div class="product-price">Rp 345.000</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">MASUKKAN JUMLAH PEMBELIAN</div>
+                        <div style="display: flex; gap: 10px;">
+                        <input id="quantity-input" type="number" min="1" value="1" style="flex: 1; padding: 12px 15px; border: none; border-radius: 8px; background: rgba(255, 255, 255, 0.9); color: #333;">
+                        <button id="btn-plus" style="padding: 12px 20px; background: #00bcd4; color: white; border: none; border-radius: 8px; cursor: pointer;">+</button>
+                        <button id="btn-minus" style="padding: 12px 20px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer;">-</button>
+                        </div>
+                </section>
+
+        <section class="section" id="payment-section">
+        <div class="section-title">PILIH METODE PEMBAYARAN</div>
+
+        <div class="accordion">
+            <!-- QRIS -->
+            <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                QRIS <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="payment-options-grid">
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (3).png" alt="QRIS All Payment" />
+                    <div class="payment-price payment-price-display" >Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">QRIS All Payment</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- E-Wallet -->
+            <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                E-Wallet <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="payment-options-grid">
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (2).png" alt="DANA" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">DANA</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (5).png" alt="ShopeePay" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">ShopeePay</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (4).png" alt="GoPay" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">GoPay</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (6).png" alt="OVO" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">OVO</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Virtual Account -->
+            <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Virtual Account <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="payment-options-grid">
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (7).png" alt="BCA" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">BCA</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (8).png" alt="Mandiri" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">BRI</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (9).png" alt="BNI" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">BNI</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Alfamart dan Indomaret -->
+            <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Alfamart dan Indomaret <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="payment-options-grid">
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (10).png" alt="Alfamart" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">Alfamart</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (11).png" alt="Indomaret" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">Indomaret</div>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Pulsa -->
+            <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAccordion(this)">
+                Pulsa <span class="arrow">▼</span>
+            </div>
+            <div class="accordion-content">
+                <div class="payment-options-grid">
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (15).png" alt="Telkomsel" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">Telkomsel</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (13).png" alt="Tri" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">Tri</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (14).png" alt="Indosat" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">Indosat</div>
+                </div>
+                <div class="payment-option-card">
+                    <img src="asset payment/Untitled design (12).png" alt="XL" />
+                    <div class="payment-price payment-price-display">Rp 3.901.758</div>
+                    <hr class="payment-divider" />
+                    <div class="payment-name">XL</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+                <section class="section">
+                    <div class="section-title">MASUKKAN KODE PROMO</div>
+                        <div class="promo-section" style="display: flex;">
+                        <input type="text" placeholder="Masukkan Kode" id="promo-code-input">
+                        <button class="promo-btn" id="apply-promo-btn">Gunakan</button>
+                    </div>
+                </section>
+
+                <section class="section">
+                    <div class="section-title">MASUKKAN DATA PRIBADI</div>
+                    <div class="contact-info">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="No. Whatsapp">
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-layout">
+            <div class="footer-side footer-left">
+                <div>
+                    <strong class="footer-title">CUSTOMER SERVICE</strong>
+                    <div class="cs-inline">
+                        <a href="#" class="cs-link">💬 CS AKUN</a>
+                        <a href="#" class="cs-link">📱 CS JOKI</a>
+                        <a href="#" class="cs-link">💬 CS JUAL AKUN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-center">
+                <p>© 2024 GLAYZERSTORE</p>
+            </div>
+
+            <div class="footer-side footer-right">
+                <div>
+                    <strong class="footer-title">LEGALITAS</strong>
+                    <div class="legal-links">
+                        <a href="syarat.html">Syarat & Ketentuan</a> |
+                        <a href="privasi.html">Kebijakan Privasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
